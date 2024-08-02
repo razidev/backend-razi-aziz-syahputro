@@ -1,0 +1,255 @@
+{
+	"info": {
+		"_postman_id": "c1338eb3-77fc-481e-bd9b-6ad46f58a779",
+		"name": "ATS Backend Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "2656749"
+	},
+	"item": [
+		{
+			"name": "merchant",
+			"item": [
+				{
+					"name": "product",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoibWVyY2hhbnQiLCJpYXQiOjE3MjI2MDQ2MzAsImV4cCI6MTcyMjYwODIzMH0.SL4nxtvgkLrX9czJ1ONenhR2-Z91ojUxRvOaTThvdMM",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Batik Setelan\",\r\n    \"price\": 10000,\r\n    \"quantity\": 150\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/merchant/product",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"merchant",
+								"product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "product edit",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoibWVyY2hhbnQiLCJpYXQiOjE3MjI2MDQ2MzAsImV4cCI6MTcyMjYwODIzMH0.SL4nxtvgkLrX9czJ1ONenhR2-Z91ojUxRvOaTThvdMM",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Batik Setelan\",\r\n    \"price\": 80000,\r\n    \"quantity\": 120\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/merchant/product/:productId",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"merchant",
+								"product",
+								":productId"
+							],
+							"variable": [
+								{
+									"key": "productId",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "product delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoibWVyY2hhbnQiLCJpYXQiOjE3MjI2MDQ2MzAsImV4cCI6MTcyMjYwODIzMH0.SL4nxtvgkLrX9czJ1ONenhR2-Z91ojUxRvOaTThvdMM",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/merchant/product/:productId",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"merchant",
+								"product",
+								":productId"
+							],
+							"variable": [
+								{
+									"key": "productId",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "buyer",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoibWVyY2hhbnQiLCJpYXQiOjE3MjI2MDQ2MzAsImV4cCI6MTcyMjYwODIzMH0.SL4nxtvgkLrX9czJ1ONenhR2-Z91ojUxRvOaTThvdMM",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/merchant/buyer",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"merchant",
+								"buyer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "generate token",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/merchant/token",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"merchant",
+								"token"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "customer",
+			"item": [
+				{
+					"name": "generate token",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/customer/token",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"customer",
+								"token"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "list product",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiY3VzdG9tZXIiLCJpYXQiOjE3MjI2MDYyMDgsImV4cCI6MTcyMjYwOTgwOH0.d68zGcYkQq__4mlq0iLKETdXzdxbk2ajuOyg8wYze-k",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/customer/products",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"customer",
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buy Product",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiY3VzdG9tZXIiLCJuYW1lIjoiSm9obiIsImlhdCI6MTcyMjYxMTI4MywiZXhwIjoxNzIyNjE0ODgzfQ.Odp6K4Y_EaImcnHv0FK1E8d0Td6GorN306i_VWi1nIU",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/customer/buy/:productId",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"customer",
+								"buy",
+								":productId"
+							],
+							"variable": [
+								{
+									"key": "productId",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
